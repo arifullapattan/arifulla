@@ -1,0 +1,50 @@
+## 1.sorting in ascending or descending order of list based on users choice
+def sorting(lst,order):
+    if order=='A':
+        s=sorted(lst) 
+        for i in s:
+            print(i) 
+    else:
+        s=list(reversed(sorted(lst))) 
+        for i in s:
+            print(i) 
+n=int(input("enter range: ")) 
+order=input("enter order A/D") 
+lst=[] 
+for i in range(n):
+    a=input() 
+    lst.append(a) 
+sorting(lst,order) 
+
+##2.counting vowels in string 
+s=input("enter string: ") 
+v='aeiouAEIOU'
+vc=0
+for i in s:
+    if i in v:
+        vc=vc+1 
+print(vc) 
+
+## 3. printing square and cube of decimal num 
+def square(n):
+    return n*n 
+def cube(n):
+    return n*n*n 
+n=float(input())  
+print(square(n)) 
+print(cube(n)) 
+
+## 4. program to count no of student users 
+t_users=int(input("enter total users: ")) 
+staff_users=int(input("enter staff users: "))
+nt=staff_users//3 
+staff_users=staff_users+nt
+student_users=t_users-staff_users 
+print("student_users are:",student_users) 
+
+## 5. reverse of string using loop 
+s=input("enter a string: ") 
+s1=" " 
+for i in range(len(s)-1,-1,-1):
+    s1+=s[i]
+print(s1) 
